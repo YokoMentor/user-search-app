@@ -8,9 +8,13 @@
 @theme inline {
   --color-bg-dark: hsl(220, 40%, 13%);
   --color-bg-light: hsl(227, 100%, 98%);
-  --color-heading-dark:hsl(217, 35%, 45%);
-  --color-heading-light:hsl(222, 44%, 70%);
+  --color-heading-dark: hsl(217, 35%, 45%);
+  --color-heading-light: hsl(222, 44%, 70%);
+  --color-container-light: hsl(0, 0%, 100%);
+  --color-container-dark: hsl(222, 41%, 20%);
+  --color-placeholder-dark: hsl(217, 35%, 45%);
   --color-error: hsl(0, 92%, 62%);
+  --color-active: hsl(212, 100%, 50%);
 }
 
 @media (prefers-color-scheme: dark) {
