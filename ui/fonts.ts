@@ -1,6 +1,6 @@
-import { Rubik } from 'next/font/google'
+import { Space_Mono } from 'next/font/google'
 
-export const rubik = Rubik({
-  weight: ['300','400','500'],
+export const spaceMono = Space_Mono({
+  weight: ['400','700'],
   subsets: ['latin'],
 })

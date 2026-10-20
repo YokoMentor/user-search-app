@@ -6,7 +6,11 @@
 }
 
 @theme inline {
-  --color-bg-dark: hsl(219,13%,44%);
+  --color-bg-dark: hsl(220, 40%, 13%);
+  --color-bg-light: hsl(227, 100%, 98%);
+  --color-heading-dark:hsl(217, 35%, 45%);
+  --color-heading-light:hsl(222, 44%, 70%);
+  --color-error: hsl(0, 92%, 62%);
 }
 
 @media (prefers-color-scheme: dark) {
