@@ -34,6 +34,18 @@ function handleThemeSwitcher() {
           </div>
           <button className='text-white w-[88px] h-[48px] bg-active border-container-light rounded-xl focus:outline-2 focus:outline-offset-2 focus:outline-active cursor-pointer'>Search</button>
         </form>
+        <div className={`${darkTheme ? 'bg-container-dark' : 'bg-container-light'} flex items-center w-full rounded-2xl`}>
+          <div className='flex'>
+            <div className={`${styles.avatar} w-[70px] h-[70px] bg-no-repeat bg-center bg-contain`}></div>
+            <div className='flex flex-col justify-start'>
+              <div className='flex flex-col'>
+                <h1 className={`${darkTheme ? 'text-container-light' : 'text-heading-dark'}`}>The Octocat</h1>
+                <p className='text-active'>@octocat</p>
+              </div>
+              <div className={`${darkTheme ? 'text-container-light' : 'text-heading-dark'}`}>Joined 25 Jan 2011</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

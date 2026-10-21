@@ -6,3 +6,6 @@
   background-image: url('../public/icon-moon.svg');
 }
 
+.avatar {
+  background-image: url('../public/avatar.png');
+}
