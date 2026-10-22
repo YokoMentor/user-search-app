@@ -6,6 +6,10 @@
   background-image: url('../public/icon-moon.svg');
 }
 
+.shadow {
+   box-shadow: 0 12px 30px rgba(70, 96, 187, 0.1986);
+}
+
 .avatar {
   background-image: url('../public/avatar.png');
 }
