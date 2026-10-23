@@ -42,9 +42,9 @@ function handleThemeSwitcher() {
           <div className='flex flex-col w-[295px] md:w-[630px] mt-8 md:mt-11'>
             <div className='flex justify-between md:items-top'>
               <div className={`${styles.avatar} w-[70px] h-[70px] md:w-[116px] md:h-[116px] bg-no-repeat bg-center bg-contain`}></div>
-              <div className='flex flex-col md:flex-row mr-8 md:ml-8'>
+              <div className='flex flex-col md:flex-row mr-8 md:mr-0'>
                 <div className='flex flex-col mt-1'>
-                  <h1 className={`${darkTheme ? 'text-container-light' : 'text-username-dark'} text-[26px] font-bold leading-none md:mr-28`}>The Octocat</h1>
+                  <h1 className={`${darkTheme ? 'text-container-light' : 'text-username-dark'} text-[26px] font-bold leading-none md:mr-36`}>The Octocat</h1>
                   <p className='text-active mt-1'>@octocat</p>
                 </div>
                 <div className={`${profileInfo} mt-1`}>Joined 25 Jan 2011</div>
