@@ -13,7 +13,8 @@
   --color-username-dark: hsl(217, 21%, 21%);
   --color-container-light: hsl(0, 0%, 100%);
   --color-container-dark: hsl(222, 41%, 20%);
-  --color-placeholder-dark: hsl(217, 35%, 45%);
+  --color-not-available-dark: hsl(221, 9%, 39%);
+  --color-not-available-light: hsl(220, 10%, 76%);
   --color-error: hsl(0, 92%, 62%);
   --color-active: hsl(212, 100%, 50%);
   --color-shadow: hsl(226.67, 46.25%, 50.39%);
