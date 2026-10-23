@@ -17,6 +17,7 @@
   --color-not-available-light: hsl(220, 10%, 76%);
   --color-error: hsl(0, 92%, 62%);
   --color-active: hsl(212, 100%, 50%);
+  --color-btn-hover: hsl(212, 100%, 69%);
   --color-shadow: hsl(226.67, 46.25%, 50.39%);
 }
 
