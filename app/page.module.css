@@ -13,3 +13,7 @@
 .avatar {
   background-image: url('../public/avatar.png');
 }
+
+@media (min-width: 768px) {
+
+}
