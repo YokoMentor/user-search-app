@@ -26,15 +26,21 @@ function handleThemeSwitcher() {
       <div className='absolute flex flex-col justify-center items-center w-[342px] md:w-[730px] top-7 md:top-31'>
         <div className='flex justify-between items-center w-full mb-6 md:mb-8 font-bold'>
           <h1 className={`${darkTheme ? 'text-bg-light' : 'text-bg-dark'} text-[25px] tracking-tighter`}>devfinder</h1>
-          <button className='flex items-center rounded-md focus:outline-2 focus:outline-active focus:outline-offset-3 cursor-pointer' onClick={handleThemeSwitcher}>
-            <div className={`${darkTheme ? 'text-heading-light hover:text-container-light' : 'text-heading-dark hover:text-username-dark'} text-[13px] tracking-[.2em]`}>{`${darkTheme ? 'LIGHT' : 'DARK'}`}</div>
-            <div className={`${darkTheme ? styles.icon_sun : styles.icon_moon} w-[20px] h-[20px] ml-2 md:ml-3`}></div>
+          <button className={`${darkTheme ? 'text-heading-light hover:text-container-light fill-heading-light hover:fill-container-light' : 'text-heading-dark hover:text-username-dark fill-heading-dark hover:fill-username-dark'} flex items-center rounded-md focus:outline-2 focus:outline-active focus:outline-offset-3 cursor-pointer`} onClick={handleThemeSwitcher}>
+            <div className='text-[13px] tracking-[.2em]'>{`${darkTheme ? 'LIGHT' : 'DARK'}`}</div>
+            <div className="ml-2 h-[20px] w-[20px] md:ml-3">
+              {darkTheme ? (
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><g fillRule="nonzero"><path d="M13.545 6.455c-.9-.9-2.17-1.481-3.545-1.481a4.934 4.934 0 00-3.545 1.481c-.9.9-1.481 2.17-1.481 3.545 0 1.376.582 2.646 1.481 3.545.9.9 2.17 1.481 3.545 1.481a4.934 4.934 0 003.545-1.481c.9-.9 1.481-2.17 1.481-3.545a4.934 4.934 0 00-1.481-3.545zM10 3.413a.7.7 0 00.688-.688V.688A.7.7 0 0010 0a.7.7 0 00-.688.688v2.037a.7.7 0 00.688.688zM15.635 5.344l1.455-1.455a.67.67 0 000-.952.67.67 0 00-.952 0l-1.455 1.455a.67.67 0 000 .952c.238.264.66.264.952 0zM19.312 9.312h-2.037a.7.7 0 00-.688.688.7.7 0 00.688.688h2.037A.7.7 0 0020 10a.7.7 0 00-.688-.688zM15.608 14.656a.67.67 0 00-.952 0 .67.67 0 000 .952l1.455 1.455a.67.67 0 00.952 0 .67.67 0 000-.952l-1.455-1.455zM10 16.587a.7.7 0 00-.688.688v2.037A.7.7 0 0010 20a.7.7 0 00.688-.688v-2.037a.7.7 0 00-.688-.688zM4.365 14.656L2.91 16.111a.67.67 0 000 .952.67.67 0 00.952 0l1.455-1.455a.67.67 0 000-.952c-.238-.264-.66-.264-.952 0zM3.413 10a.7.7 0 00-.688-.688H.688A.7.7 0 000 10a.7.7 0 00.688.688h2.037A.7.7 0 003.413 10zM4.365 5.344a.67.67 0 00.952 0 .67.67 0 000-.952L3.862 2.937a.67.67 0 00-.952 0 .67.67 0 000 .952l1.455 1.455z"/></g></svg>
+              ) : (
+                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M19.513 11.397a.701.701 0 00-.588.128 7.496 7.496 0 01-2.276 1.336 7.101 7.101 0 01-2.583.462 7.505 7.505 0 01-5.32-2.209 7.568 7.568 0 01-2.199-5.342c0-.873.154-1.72.41-2.49a6.904 6.904 0 011.227-2.21.657.657 0 00-.102-.924.701.701 0 00-.589-.128C5.32.61 3.427 1.92 2.072 3.666A10.158 10.158 0 000 9.83c0 2.8 1.125 5.342 2.967 7.19a10.025 10.025 0 007.16 2.98c2.353 0 4.527-.822 6.266-2.183a10.13 10.13 0 003.58-5.624.623.623 0 00-.46-.796z" fillRule="nonzero"/></svg>
+              )}
+            </div>
           </button>
         </div>
        <form className={`${containerStyle} justify-between py-3 px-3 md:pl-6 md:pr-3 focus-within:outline focus-within:outline-2 focus-within:outline-active`}>
         <div className='flex w-[220px] md:w-[340px]'>
             <svg className='w-[24px] h-[24px] md:w-[29px] md:h-[29px]' viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M10.609 0c5.85 0 10.608 4.746 10.608 10.58 0 2.609-.952 5-2.527 6.847l5.112 5.087a.87.87 0 01-1.227 1.233l-5.118-5.093a10.58 10.58 0 01-6.848 2.505C4.759 21.16 0 16.413 0 10.58 0 4.747 4.76 0 10.609 0zm0 1.74c-4.891 0-8.87 3.965-8.87 8.84 0 4.874 3.979 8.84 8.87 8.84a8.855 8.855 0 006.213-2.537l.04-.047a.881.881 0 01.058-.053 8.786 8.786 0 002.558-6.203c0-4.875-3.979-8.84-8.87-8.84z" fill="#0079ff"/></svg>
-            <input type='text' placeholder='Search GitHub username...' className={`${darkTheme ? 'placeholder:text-container-light placeholder:opacity-70' : 'placeholder:text-heading-dark'} w-[194px] md:w-[340px] text-[13px] md:text-[18px] tracking-[-0.01em] ml-1 md:ml-4 focus:outline-none`}/>
+            <input type='text' placeholder='Search GitHub username...' className={`${darkTheme ? 'placeholder:text-container-light placeholder:opacity-70 text-container-light ' : 'placeholder:text-heading-dark text-username-dark'} w-[194px] md:w-[340px] text-[13px] md:text-[18px] tracking-[-0.01em] ml-1 md:ml-4 focus:outline-none`}/>
           </div>
           <button className='text-white w-[88px] md:w-[108px] h-[48px] bg-active hover:bg-btn-hover border-container-light rounded-xl focus:outline-2 focus:outline-offset-2 focus:outline-active cursor-pointer'>Search</button>
         </form>
