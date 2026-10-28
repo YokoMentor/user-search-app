@@ -19,7 +19,7 @@
   --color-active: hsl(212, 100%, 50%);
   --color-btn-hover: hsl(212, 100%, 69%);
   --color-shadow: hsl(226.67, 46.25%, 50.39%);
-  --color-no-results-dark: hsl(217, 20%, 51%);
+  --color-no-results-light: hsl(217, 20%, 51%);
 }
 
 @media (prefers-color-scheme: dark) {
