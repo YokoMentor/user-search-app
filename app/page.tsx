@@ -134,7 +134,14 @@ export default function Page() {
                   <h1 className={`${darkTheme ? 'text-container-light' : 'text-username-dark'} text-[26px] font-bold leading-none md:mr-36`}>{dataResponse?.login}</h1>
                   <p className='text-active mt-1'>{dataResponse?.url ?? "Not Available"}</p>
                 </div>
-                <div className={`${joinedStyle} mt-1`}>Joined {dataResponse?.created_at}</div>
+                <div className={`${joinedStyle} mt-1`}>
+                  Joined {dataResponse?.created_at && new Intl.DateTimeFormat("en-GB", {
+                    day: "2-digit",
+                    month: "short",
+                    year: "numeric",
+                    timeZone: "UTC",
+                  }).format(new Date(dataResponse.created_at))}
+                </div>
               </div>
             </div>
           <div className={`${bioStyle} mt-6 md:mt-[-32px] md:ml-37`}>{dataResponse?.bio ?? "This profile has no bio"}</div>
