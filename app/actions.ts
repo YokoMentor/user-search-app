@@ -1,7 +1,7 @@
 export interface DataResponse {
 	login: string;
 	avatar_url: string;
-	url: string;
+	html_url: string;
 	created_at: string;
 	bio: string;
 	public_repos: string;
@@ -22,7 +22,7 @@ export async function fetchData(login: string): Promise<DataResponse> {
 		const result: DataResponse = {
 			login: '',
 			avatar_url: '',
-			url: '',
+			html_url: '',
 			created_at: '',
 			bio: '',
 			public_repos: '',

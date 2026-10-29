@@ -132,7 +132,7 @@ export default function Page() {
               <div className='flex flex-col md:flex-row mr-8 md:mr-0'>
                 <div className='flex flex-col mt-1'>
                   <h1 className={`${darkTheme ? 'text-container-light' : 'text-username-dark'} text-[26px] font-bold leading-none md:mr-36`}>{dataResponse?.login}</h1>
-                  <p className='text-active mt-1'>{dataResponse?.url ?? "Not Available"}</p>
+                  <a className='text-active mt-1' href={dataResponse?.html_url} target='_blank' rel='noreferrer'>@{dataResponse?.login}</a>
                 </div>
                 <div className={`${joinedStyle} mt-1`}>
                   Joined {dataResponse?.created_at && new Intl.DateTimeFormat("en-GB", {
