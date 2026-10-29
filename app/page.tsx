@@ -18,13 +18,14 @@ export default function Page() {
   const paramsLogin = useSearchParams();
 
   const containerStyle = `${darkTheme ? 'bg-container-dark' : 'bg-container-light'} ${darkTheme ? '' : styles.shadow} flex items-center w-full rounded-2xl`;
-  const profileInfo = `${darkTheme ? 'text-container-light' : 'text-heading-dark'} tracking-tighter`;
+  const joinedStyle = `${darkTheme ? 'text-container-light' : 'text-heading-dark'} tracking-tighter`;
+  const bioStyle = `${darkTheme ? dataResponse?.bio ? 'text-container-light' : 'text-container-light opacity-45' : dataResponse?.bio ? 'text-heading-dark' : 'text-heading-dark opacity-45'} tracking-tighter`;
   const userInfoTitle = `${darkTheme ? 'text-container-light' : 'text-heading-dark'} text-[13px]`;
   const userInfo = `${darkTheme ? 'text-container-light' : 'text-username-dark'} font-bold text-[22px] mb-4`;
-  const contactLocation = `${darkTheme ? dataResponse?.location ? 'text-container-light fill-container-light' : 'text-container-light fill-container-light opacity-70' : dataResponse?.location ? 'text-heading-dark fill-heading-dark' : 'text-heading-dark fill-heading-dark opacity-70'} text-[15px] ml-4`;
-  const contactTwitter = `${darkTheme ? dataResponse?.twitter_username ? 'text-container-light fill-container-light' : 'text-container-light fill-container-light opacity-70' : dataResponse?.twitter_username ? 'text-heading-dark fill-heading-dark' : 'text-heading-dark fill-heading-dark opacity-70'} text-[15px] ml-4`;
-  const contactBlog = `${darkTheme ? dataResponse?.blog ? 'text-container-light fill-container-light' : 'text-container-light fill-container-light opacity-70' : dataResponse?.blog ? 'text-heading-dark fill-heading-dark' : 'text-heading-dark fill-heading-dark opacity-70'} text-[15px] ml-4`;
-  const contactCompany = `${darkTheme ? dataResponse?.company ? 'text-container-light fill-container-light' : 'text-container-light fill-container-light opacity-70' : dataResponse?.company ? 'text-heading-dark fill-heading-dark' : 'text-heading-dark fill-heading-dark opacity-70'} text-[15px] ml-4`;
+  const contactLocation = `${darkTheme ? dataResponse?.location ? 'text-container-light fill-container-light' : 'text-container-light fill-container-light opacity-45' : dataResponse?.location ? 'text-heading-dark fill-heading-dark' : 'text-heading-dark fill-heading-dark opacity-45'} text-[15px] ml-4`;
+  const contactTwitter = `${darkTheme ? dataResponse?.twitter_username ? 'text-container-light fill-container-light' : 'text-container-light fill-container-light opacity-45' : dataResponse?.twitter_username ? 'text-heading-dark fill-heading-dark' : 'text-heading-dark fill-heading-dark opacity-45'} text-[15px] ml-4`;
+  const contactBlog = `${darkTheme ? dataResponse?.blog ? 'text-container-light fill-container-light' : 'text-container-light fill-container-light opacity-45' : dataResponse?.blog ? 'text-heading-dark fill-heading-dark' : 'text-heading-dark fill-heading-dark opacity-45'} text-[15px] ml-4`;
+  const contactCompany = `${darkTheme ? dataResponse?.company ? 'text-container-light fill-container-light' : 'text-container-light fill-container-light opacity-45' : dataResponse?.company ? 'text-heading-dark fill-heading-dark' : 'text-heading-dark fill-heading-dark opacity-45'} text-[15px] ml-4`;
 
   function returnHome() {
     window.location.href = '/';
@@ -133,10 +134,10 @@ export default function Page() {
                   <h1 className={`${darkTheme ? 'text-container-light' : 'text-username-dark'} text-[26px] font-bold leading-none md:mr-36`}>{dataResponse?.login}</h1>
                   <p className='text-active mt-1'>{dataResponse?.url ?? "Not Available"}</p>
                 </div>
-                <div className={`${profileInfo} mt-1`}>Joined {dataResponse?.created_at ?? "Not Available"}</div>
+                <div className={`${joinedStyle} mt-1`}>Joined {dataResponse?.created_at}</div>
               </div>
             </div>
-          <div className={`${profileInfo} opacity-75 mt-6 md:mt-[-32px] md:ml-37`}>{dataResponse?.bio ?? "This profile has no bio"}</div>
+          <div className={`${bioStyle} mt-6 md:mt-[-32px] md:ml-37`}>{dataResponse?.bio ?? "This profile has no bio"}</div>
           </div>
           <div className={`${darkTheme ? 'bg-bg-dark' : 'bg-bg-light'} flex flex-col md:flex-row items-start w-[295px] md:w-[480px] rounded-xl px-5 pt-4 mt-6 mb-7 md:ml-37 md:pl-8 md:gap-24`}>
             <div>
