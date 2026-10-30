@@ -127,9 +127,9 @@ export default function Page() {
       {isVisible &&
         <div className={`${containerStyle} flex-col mt-8 md:mt-10`}>
           <div className='flex flex-col w-[295px] md:w-[630px] mt-8 md:mt-11'>
-            <div className='flex justify-between md:items-top'>
-              <img src={dataResponse?.avatar_url} alt='Profile image' className='w-[70px] h-[70px] md:w-[116px] md:h-[116px] bg-no-repeat bg-center bg-contain rounded-full'/>
-              <div className='flex flex-col md:flex-row mr-11 md:mr-0'>
+            <div className='flex md:items-top'>
+              <img src={dataResponse?.avatar_url} alt='Profile image' className='w-[70px] h-[70px] md:w-[116px] md:h-[116px] bg-no-repeat bg-center bg-contain rounded-full mr-5 md:mr-8'/>
+              <div className='flex flex-col md:flex-row md:mr-0'>
                 <div className='flex flex-col mt-0 md:mt-1'>
                   <h1 className={`${darkTheme ? 'text-container-light' : 'text-username-dark'} text-[26px] font-bold leading-none md:mr-36`}>{dataResponse?.login}</h1>
                   <a className='text-active mt-1' href={dataResponse?.html_url} target='_blank' rel='noreferrer'>@{dataResponse?.login}</a>
