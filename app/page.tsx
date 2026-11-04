@@ -90,8 +90,8 @@ export default function Page() {
   }, [login, paramsLogin])
   
   return (
-    <div className={`${darkTheme ? 'bg-bg-dark' : 'bg-bg-light'} flex flex-col min-h-screen justify-center items-center`}>
-      <div className='absolute flex flex-col justify-center items-center w-[342px] md:w-[730px] top-7 md:top-31'>
+    <div className={`${darkTheme ? 'bg-bg-dark' : 'bg-bg-light'} flex flex-col min-h-screen items-center`}>
+      <div className='flex flex-col justify-center items-center w-[342px] md:w-[730px] mt-7 md:mt-31'>
         <div className='flex justify-between items-center w-full mb-6 md:mb-8 font-bold'>
           <h1 className={`${darkTheme ? 'text-bg-light' : 'text-bg-dark'} text-[25px] tracking-tighter`} onClick={returnHome}>devfinder</h1>
           <button className={`${darkTheme ? 'text-heading-light hover:text-container-light fill-heading-light hover:fill-container-light' : 'text-heading-dark hover:text-username-dark fill-heading-dark hover:fill-username-dark'} flex items-center rounded-md focus:outline-2 focus:outline-active focus:outline-offset-3 cursor-pointer`} onClick={handleThemeSwitcher}>
@@ -125,7 +125,7 @@ export default function Page() {
         </div>}
       
       {isVisible &&
-        <div className={`${containerStyle} flex-col mt-8 md:mt-10`}>
+        <div className={`${containerStyle} flex-col mt-8 md:mt-10 mb-30`}>
           <div className='flex flex-col w-[295px] md:w-[630px] mt-8 md:mt-11'>
             <div className='flex md:items-top'>
               <img src={dataResponse?.avatar_url} alt='Profile image' className='w-[70px] h-[70px] md:w-[116px] md:h-[116px] bg-no-repeat bg-center bg-contain rounded-full mr-5 md:mr-8'/>
