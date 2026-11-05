@@ -76,11 +76,13 @@ export default function Page() {
         if(isValidLogin(login as string)) {
           const data = await fetchData(login as string);
           console.log(data);
-          if(data.login !== '') {
-            setIsMsgVisible(false);
-          } else {
+          const hasLogin = Boolean(data?.login?.trim());
+          if(!hasLogin) {
             setIsMsgVisible(true);
             setIsVisible(false);
+          } else {
+            setIsMsgVisible(false);
+            setIsVisible(true);
           }
           setDataResponse(data);
         }
