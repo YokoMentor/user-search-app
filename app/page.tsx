@@ -119,10 +119,10 @@ export default function Page() {
           </div>
         </form>
         {isMsgVisible && 
-        <div className={`${containerStyle} flex-col mt-8`}>
-          <div className='flex flex-col w-[295px] md:w-[630px] mt-8 md:mt-11'>
+        <div className={`${containerStyle} flex-col mt-8 md:mt-10 text-center`}>
+          <div className='flex flex-col w-[295px] md:w-[630px] my-12'>
             <h1 className={`${darkTheme ? 'text-container-light' : 'text-username-dark'} text-[22px] font-bold leading-none`}>No results found!</h1>
-            <p className={`${darkTheme ? 'text-heading-light' : 'text-no-results-light'}`}>We couldn&#39;t find any GitHub users matching your search. Please double-check the username and try again.</p>
+            <p className={`${darkTheme ? 'text-heading-light' : 'text-no-results-light'} text-[15px] mt-5`}>We couldn&#39;t find any GitHub users matching your search. Please double-check the username and try again.</p>
           </div>
         </div>}
       
